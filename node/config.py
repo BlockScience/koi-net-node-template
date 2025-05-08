@@ -1,8 +1,8 @@
 from pydantic import Field
-from koi_net.config import Config, KoiNetConfig
+from koi_net.config import NodeConfig, KoiNetConfig
 from koi_net.protocol.node import NodeProfile, NodeProvides, NodeType
 
-class NodeConfig(Config):
+class MyNodeConfig(NodeConfig):
     koi_net: KoiNetConfig | None = Field(default_factory = lambda:
         KoiNetConfig(
             node_name="my-node-name",   # human readable name for your node
