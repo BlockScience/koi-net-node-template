@@ -2,38 +2,45 @@
 
 # Quick Start
 
-## 1. Create Template Repo
-
+## 1. Create repo from template
 Click `Use this template` -> `Create a new repository` and finish the set up process.
 
-## 2. Clone Repo
+## 2. Clone repo
 Clone the resulting repository
 ```
 git clone <your-github-url-here>
 ```
 
-## 3. Set up Virtual Environment
+## 3. Set up virtual environment
 
 ```
-python -m venv
+python -m venv .venv
 ```
 For Windows:
 ```
-venv\Scripts\activate
+.venv\Scripts\activate
 ```
 For Mac/Linux:
 ```
-source venv\bin\activate
+source .venv\bin\activate
 ```
 
-## 4. Install dependencies
+## 4. Set node name
+
+Pick a name for your node, and update the package directory name in `src/`, `node_name` in `config.py`, and `name` in `pyproject.toml`.
+
+## 5. Install your node package
+This will install your node in editable mode, reflecting changes as you edit the source code.
 ```
-pip install -r requirements.txt
+pip install -e .
 ```
 
-## 5. Run node server
+## 6. Set up .env file
+Create a file called `.env` and inside set `PRIV_KEY_PASSWORD=<password_of_your choice>`. This will be used to encrypt your node's private key.
+
+## 7. Run node server
 ```
-python -m node
+python -m koi_net_YOUR_NODE_NAME_node
 ```
 
 # Modifying this Node
