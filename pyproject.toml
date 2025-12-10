@@ -7,14 +7,12 @@ name = "koi-net-CHANGE-NAME-node"
 version = "0.1.0"
 description = "SET NODE DESCRIPTION"
 authors = [
-    {name = "Luke Miller", email = "luke@block.science"}
+    # {name = "<YOUR NAME>", email = "<YOUR EMAIL>"}
 ]
 readme = "README.md"
 requires-python = ">=3.10"
-license = {file = "LICENSE"}
 dependencies = [
-    "koi-net>=1.1.0b8",
-    "rich>=14.0.0"
+    "koi-net~=1.2.0"
 ]
 
 [project.optional-dependencies]

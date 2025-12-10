@@ -1,3 +1,3 @@
-from .core import node
+from .core import MyNode
 
-node.server.run()
+MyNode().run()

@@ -1,8 +1,7 @@
-rid_cache
-identity.json
-events_queue.json
 .venv
 .env
+.rid_cache
+*.ndjson
 *.json
 __pycache__
 config.yaml
