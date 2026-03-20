@@ -1,9 +1,9 @@
 from rid_lib.types import KoiNetNode
-from koi_net.config.full_node import (
+from koi_net.config import (
     FullNodeConfig, 
     KoiNetConfig, 
     ServerConfig, 
-    NodeProfile, 
+    FullNodeProfile, 
     NodeProvides
 )
 
@@ -11,7 +11,7 @@ from koi_net.config.full_node import (
 class MyNodeConfig(FullNodeConfig):
     koi_net: KoiNetConfig = KoiNetConfig(
         node_name="my-node-name",   # human readable name for your node
-        node_profile=NodeProfile(
+        node_profile=FullNodeProfile(
             provides=NodeProvides(
                 event=[],   # RID types of provided events
                 state=[]    # RID types of provided state
