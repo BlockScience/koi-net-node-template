@@ -1,16 +1,16 @@
-import structlog
-from koi_net.processor.handler import (
-    KnowledgeHandler, 
-    HandlerType, 
-    HandlerContext,
-    KnowledgeObject
-)
+from dataclasses import dataclass
+from logging import Logger
 
-log = structlog.stdlib.get_logger()
+from koi_net.components.interfaces import KnowledgeHandler, HandlerType, STOP_CHAIN
+from koi_net.protocol import KnowledgeObject
 
 
-@KnowledgeHandler.create(
-    handler_type=HandlerType.RID,
-    rid_types=[])
-def my_handler(ctx: HandlerContext, kobj: KnowledgeObject):
-    log.info(f"Handling {ctx.identity.rid}")
+@dataclass
+class MyKnowledgeHandler(KnowledgeHandler):
+    log: Logger
+    
+    handler_type=HandlerType.RID
+    rid_types=()
+    
+    def handle(self, kobj: KnowledgeObject):
+        self.log.info(f"Handling {kobj.rid}")
