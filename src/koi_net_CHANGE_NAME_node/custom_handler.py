@@ -6,11 +6,14 @@ from koi_net.protocol import KnowledgeObject
 
 
 @dataclass
-class MyKnowledgeHandler(KnowledgeHandler):
+class CustomHandler(KnowledgeHandler):
+    # add dependencies here:
     log: Logger
     
     handler_type=HandlerType.RID
     rid_types=()
     
     def handle(self, kobj: KnowledgeObject):
+        # return nothing, a modified knowledge object, or STOP_CHAIN
+        
         self.log.info(f"Handling {kobj.rid}")

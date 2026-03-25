@@ -1,15 +1,15 @@
 [project]
 name = "koi-net-CHANGE-NAME-node"
 version = "0.1.0"
-description = "SET NODE DESCRIPTION"
+description = "<YOUR NODE DESCRIPTION>"
 authors = [
     # {name = "<YOUR NAME>", email = "<YOUR EMAIL>"}
 ]
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "koi-net~=1.3.0"
+    "koi-net~=2.0"
 ]
 
-[project.urls]
-# Homepage = "SET TO NODE REPO URL"
+# [project.urls]
+# Homepage = "<YOUR NODE REPO URL>"
