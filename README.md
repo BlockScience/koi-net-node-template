@@ -22,7 +22,7 @@ For Windows:
 ```
 For Mac/Linux:
 ```
-source .venv\bin\activate
+source .venv/bin/activate
 ```
 
 ## 4. Set node name
