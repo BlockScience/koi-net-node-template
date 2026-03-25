@@ -19,9 +19,7 @@ git clone <your-github-url-here>
 uv venv
 ```
 
----
-
-Or use the build in virtual environment: 
+Alternatively, use the built-in virtual environment: 
 ```
 python -m venv .venv
 ```
@@ -49,7 +47,7 @@ uv pip install --editable .
 ```
 or
 ```
-pip install -editable .
+pip install --editable .
 ```
 
 ## 6. Set up .env file
