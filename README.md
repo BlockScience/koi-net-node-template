@@ -63,7 +63,7 @@ This repo comes with a workflow to publish to PyPI. You'll need a PYPI account l
 Once you have a project page, update the URL on line 38 of `.github/workflows/publish-to-pypi.yml`. Now whenever a tag is created of the form `v*.*.*` that commit will automatically be published to PyPI. Make sure that the version specifier in `pyproject.toml` matches the version in the tag you are using.
 
 # Modifying this Node
-Take a look at the [koi-net repo](https://github.com/BlockScience/koi-net) for documentation about the koi-net package and developing nodes. This template provides the basic structure for a full node setup. You'll likely want to start by modifying `config.py` with the RID types your node deals with, and adding your own knowledge handlers (see example in `custom_handler.py`).
+Take a look at the [koi-net repo](https://github.com/DynamicalSystemsGroup/koi-net) for documentation about the koi-net package and developing nodes. This template provides the basic structure for a full node setup. You'll likely want to start by modifying `config.py` with the RID types your node deals with, and adding your own knowledge handlers (see example in `custom_handler.py`).
 
 # Adding a License
 This template doesn't contain any license by default. If you add a `LICENSE` file, make sure to update your `pyproject.toml` with the following line:
